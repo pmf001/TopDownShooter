@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://jahwm3317g7"]
+
+[ext_resource type="PackedScene" uid="uid://c3c5dq671kk6i" path="res://player.tscn" id="1_jxcs1"]
+[ext_resource type="PackedScene" uid="uid://dxeglpdmq02pw" path="res://zombie.tscn" id="2_vrtr8"]
+
+[node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_jxcs1")]
+position = Vector2(553, 600)
+rotation = 4.71239
+
+[node name="Zombie" parent="." instance=ExtResource("2_vrtr8")]
+position = Vector2(91, 72)
+rotation = 0.785398
+
+[node name="Zombie2" parent="." instance=ExtResource("2_vrtr8")]
+position = Vector2(550, 57)
+rotation = 1.5708
+
+[node name="Zombie3" parent="." instance=ExtResource("2_vrtr8")]
+position = Vector2(1031, 69)
+rotation = 2.35619

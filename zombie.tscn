@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxeglpdmq02pw"]
+
+[ext_resource type="Script" path="res://Zombie.gd" id="1_3jgpu"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bhiot"]
+load_path = "res://.godot/imported/zombie_walking.png-3cd926826c49bc5886d8d9a6d6083a97.ctex"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5h8h2"]
+radius = 17.0
+height = 44.0
+
+[node name="Zombie" type="CharacterBody2D"]
+script = ExtResource("1_3jgpu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("CompressedTexture2D_bhiot")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 0)
+shape = SubResource("CapsuleShape2D_5h8h2")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(10, 0)
+target_position = Vector2(50, 0)
